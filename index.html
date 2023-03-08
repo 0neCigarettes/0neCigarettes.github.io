@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href='./img/logo-title.png' rel='shortcut icon'>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  <title>Bank Waway Lampung</title>
+</head>
+
+<body>
+  <!-- navabar -->
+  <?php include 'partials/navbar.php'; ?>
+
+  <!--Cover -->
+  <div id="carouselExampleSlidesOnly" class="carousel slide text-white" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="width: 100%; height: 310px;object-fit: cover;
+            object-position: 15% 50%; filter: brightness(65%);" src="./img/pinjaman-cover.png" class="card-img"
+          alt="...">
+        <div class="card-img-overlay top-50 start-0 translate-middle-y px-5">
+          <h1 class="card-title text-white">DEPOSITO BERJANGKA</h1>
+          <p class="card-text">Bunga deposito BPR 6%, Bisa menjadi pilihan dalam berinventasi </p>
+          <p class="card-text">Deposito adalah salah satu jawaban yang tepat untuk milenial yang ingin
+            berinvestasi dengan aman.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <div class="jumbotron">
+      <center>
+        <h3 class="lead">Simulasi Perhitungan Deposito.</h3>
+      </center>
+      <hr class="my-2">
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form>
+              <div class="form-group row">
+                <div class="input-group mb-2">
+                  <label for="nominal" class="col-sm-4 col-form-label">Nominal Saldo</label>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Rp. </div>
+                  </div>
+                  <input type="text" class="form-control" id="nominal" placeholder="Min 1 Juta">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">,-</div>
+                  </div>
+                </div>
+                <div class="input-group mb-4">
+                  <label for="jangka" class="col-sm-4 col-form-label">Jangka Waktu (bulan)</label>
+                  <select name="jangka" id="jangka" class="form-control">
+                    <option value="1">1 bulan</option>
+                    <option value="3">3 bulan</option>
+                    <option value="6">6 bulan</option>
+                    <option value="12">12 bulan</option>
+                  </select>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                    <button class="btn btn-primary btn-lg" onclick="hitung()" type="submit">Learn more</button>
+
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+          <div class="col">
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- content -->
+  <!-- <div style="margin: 10px 10px; width:90%; height: auto;"
+        class="row row-cols-1 mx-auto row-cols-md-3 text-white p-5">
+        <a href="./deposito-1-bulan.html" class="text-white">
+            <div class="col content-produk my-3 ">
+                <img style="filter: brightness(50%);border-radius: 80px 10px;" src="./img/Home-1.jpg"
+                    class="card-img shadow bg-body " alt="...">
+                <div class="card-img-overlay">
+                    <h3 style="color: white;" class="card-title text-center">1 Bulan</h3>
+                    <p class="card-text px-4">Suku bunga yang ditawarkan cukup tinggi, <strong> 5,50% P.A </strong> </p>
+                </div>
+            </div>
+        </a>
+        <a href="./deposito-3&6-bulan.html" class="text-white">
+            <div class="col content-produk my-3 ">
+                <img style="filter: brightness(50%);border-radius: 80px 10px;" src="./img/Home-1.jpg"
+                    class="card-img shadow bg-body " alt="...">
+                <div class="card-img-overlay">
+                    <h3 style="color: white;" class="card-title text-center">3 & 6 Bulan</h3>
+                    <p class="card-text px-4">Suku bunga yang ditawarkan cukup tinggi, <strong> 5,75% P.A </strong> </p>
+                </div>
+            </div>
+        </a> <a href="./deposito-12-bulan.html" class="text-white">
+            <div class="col content-produk my-3 ">
+                <img style="filter: brightness(50%);border-radius: 80px 10px;" src="./img/Home-1.jpg"
+                    class="card-img shadow bg-body " alt="...">
+                <div class="card-img-overlay">
+                    <h3 style="color: white;" class="card-title text-center">12 Bulan</h3>
+                    <p class="card-text px-4">Suku bunga yang ditawarkan cukup tinggi, <strong> 6,00% P.A </strong> </p>
+                </div>
+            </div>
+        </a>
+    </div> -->
+
+
+  <!-- footer -->
+  <?php include 'partials/footer.php'; ?>
+
+  </div>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.1.0"></script> -->
+
+  <script type="text/javascript">
+
+    function hitung () {
+      let jumlah_deposit = document.getElementById("nominal").value;
+      // let jumlah_deposit = Number($('#nominal').val()); field input jumlah deposit required
+      let jangka = Number($('#jangka').val()); // 1/3/6/12 dari selected option
+      let bunga = 0;
+
+
+      if (jangka == 1) {
+        bunga = 5.50
+      }
+      else
+        if (jangka == 3) {
+          bunga = 5.75
+        } else
+          if (jangka == 6) {
+            bunga = 5.5
+          } else
+            if (jangka == 12) {
+              bunga = 5.5
+            }
+
+      // Nominal x 5,50 : 12 - 20% = Hasil
+
+      console.log(jangka);
+      let hasil = jumlah_deposit * bunga / 12;
+
+      // let nominal_bunga_perbulan = (((jumlah_deposit * bunga) / 100) * jangka) / 12;
+      // let akumulasi_bunga = nominal_bunga_perbulan * jangka;
+      // let total_akhir = jumlah_deposit + akumulasi_bunga;
+
+
+
+    };
+
+    // function
+
+  </script>
+</body>
+
+</html>
